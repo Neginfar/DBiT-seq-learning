@@ -159,4 +159,7 @@ make
 make install
 ```
 
-
+submiting the effective.sh to capture barcodes A and B and ready for ST pipeline
+```
+sbatch effective.sh
+```
