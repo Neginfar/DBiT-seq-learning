@@ -114,9 +114,9 @@ to check if the job is running
 ```
 squeue -u nf289 
 ```
+# wokflow with ST data
 
-
-# downloading the sequence data from Novogene, from the link
+downloading the sequence data from Novogene, from the link
 ```
 wget #link of the files
 ```
