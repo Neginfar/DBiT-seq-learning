@@ -158,8 +158,19 @@ perl Makefile.PL PREFIX=/gpfs/home/nf289/project/01.FFhLiver/00.software
 make
 make install
 ```
+upload 1.effective pl in 00.bin on cyberduck
+
+
 
 submiting the effective.sh to capture barcodes A and B and ready for ST pipeline
 ```
 sbatch effective.sh
 ```
+going to to run R on farnam
+```
+https://ood-farnam.hpc.yale.edu/
+```
+runing the packages script from https://github.com/grmsu/DBiT-start
+https://github.com/grmsu/DBiT-start.git
+
+
