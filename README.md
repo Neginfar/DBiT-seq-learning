@@ -2,29 +2,29 @@
 ```
 perl xxxxxx
 ```
-#current pathway
+current pathway
 
 ```
 pwd
 ```
 
-#change directory to project 
+change directory to project 
 
 ```
 cd project
 ```
 
-#making directories , creat a file with the name of the project
+making directories , creat a file with the name of the project
 
 ```
 mkdir #name of files#
 ```
-#making files in the new project folder
+making files in the new project folder
 
 ```
 cd #sample_name_file#
 ```
-#making files
+making files
 
 ```
 mkdir 00.bin
@@ -32,7 +32,9 @@ mkdir 00.bin
 ```
 mkdir 00.sh
 ```
+```
 mkdir 00.software
+```
 ```
 mkdir 01.rawdata
 ```
@@ -41,35 +43,35 @@ mkdir 00.0utput
 ```
 
 
-#need to increase the memory 
+need to increase the memory 
 
 ```
 srun --pty -p interactive --mem=8g bash
 ```
 
-#looking into the folders
+looking into the folders
 
 ```
 ls -lrt
 ```
-#List the names of the files in directory along with the permissions, date, time and size
+List the names of the files in directory along with the permissions, date, time and size
 ```
 ll
 ```
-#removing files
+removing files
 
 ```
 rm -rf #name_of_file/
 ```
-#remove anything that ends with sh and copy to 00.sh folder
+remove anything that ends with sh and copy to 00.sh folder
 ```
 mv *.sh 00.sh/
 ```
-#move folder to another folder
+move folder to another folder
 ```
 mv #folder_want_to_move/ ../#destination_folder/
 ```
-#Rreading a file
+Rreading a file
 
 ```
 less -S name_of_file 
@@ -78,38 +80,36 @@ less -S name_of_file
 cat #file_name
 ```
 
-#copy files to folder 
+copy files to folder 
 
 ```
 cp #name_of_file #destination_folder 
 ```
 
 
-# downloading the raw data from Novogene 
+downloading the raw data from Novogene 
 ```
 wget #link of R1 and R2#
 ```
-#uplpad the sh in your directory
+uplpad the sh in your directory
 
-#open the a file and edit 
+open the a file and edit 
 ```
 vim #name_of_file
 ```
-#type i to edit
+type i to edit
 
-#hit esc
+hit esc
 
-#to save and exit
+to save and exit
 ```
  :wq!
 ```
-
-
-#submit a script and job
+submit a script and job
 ```
 sbatch effective.sh 
 ```
-#to check if the job is running
+to check if the job is running
 
 ```
 squeue -u nf289 
