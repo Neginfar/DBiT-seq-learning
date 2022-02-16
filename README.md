@@ -1,4 +1,4 @@
-# learning the environment of terminal
+# Learning the environment of terminal
 ```
 perl xxxxxx
 ```
@@ -116,6 +116,47 @@ squeue -u nf289
 ```
 
 
+# downloading the sequence data from Novogene, from the link
+```
+wget #link of the files
+```
+move to the right directory 
 
+looking into the report file
+```
+dispaly Rawdata_Readme.pdf 
+```
+for healthy human fresh sample the Q20 and Q30 should be above 90% and the percentage of CG should be 42-53%
+
+going back to the directory
+```
+work
+```
+loading the environments
+```
+module load miniconda
+conda create -n st-pipeline python=3.7
+conda activate st-pipeline
+conda install -c bioconda star
+conda install -c bioconda samtools openssl=1.0
+st_pipeline_run.py -v
+
+conda install PySam
+conda install Numpy
+conda install Cython
+pip install taggd
+pip install stpipeline
+
+```
+```
+wget https://cpan.metacpan.org/authors/id/N/NW/NWCLARK/PerlIO-gzip-0.20.tar.gz
+module avail Perl
+module load Perl/5.28.0-GCCcore-7.3.0
+tar -zxvf PerlIO-gzip-0.20.tar.gz 
+cd PerlIO-gzip-0.20/
+perl Makefile.PL PREFIX=/gpfs/home/nf289/project/01.FFhLiver/00.software
+make
+make install
+```
 
 
