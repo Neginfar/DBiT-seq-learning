@@ -91,9 +91,9 @@ downloading the raw data from Novogene
 ```
 wget #link of R1 and R2#
 ```
-uplpad the sh in your directory
+upload the sh in your directory
 
-open the a file and edit 
+open a file and edit 
 ```
 vim #name_of_file
 ```
