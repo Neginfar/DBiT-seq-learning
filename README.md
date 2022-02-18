@@ -146,11 +146,11 @@ going back to the directory
 ```
 work
 ```
-loading the environments
+install ST-pipeline
 ```
-module load miniconda
+module load miniconda  #only this line is used for the next times
 conda create -n st-pipeline python=3.7
-conda activate st-pipeline
+conda activate st-pipeline. #only this line is used for the next times
 conda install -c bioconda star
 conda install -c bioconda samtools openssl=1.0
 st_pipeline_run.py -v
@@ -187,11 +187,40 @@ runing the packages script from https://github.com/grmsu/DBiT-start
 https://github.com/grmsu/DBiT-start.git
 
 
-# looking into Data Quality 
+# looking quick into Raw Data Quality 
+```
+cd 01.FFhLiver/
+cd 01.rawdata/
+cd FF
+```
 
+get the barcode
+```
+zcat FF_2.fq.gz | grep AACGTGAT
+```
 
 
 # submiting ST pipeline
+```
+cd 00.sh
+```
+# going to ST environment
+```
+conda activate st-pipeline
+module load miniconda
+````
+```
+sbatch FF.stpipeline.sh
+sbatch PFA.stpipeline.sh
+```
 
-
+looking into output 
+```
+cd 03.stpipeline
+```
+changing the geneIDs to gene names
+```
+sh PFA.changid.sh 
+```
+note: the ones that still have IDs are the pixels with no barcodes and the matrix is the number of UMIs ( genes=columns, rows=pixels)
 
