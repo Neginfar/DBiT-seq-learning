@@ -126,7 +126,21 @@ looking into the report file
 ```
 dispaly Rawdata_Readme.pdf 
 ```
-for healthy human fresh sample the Q20 and Q30 should be above 90% and the percentage of CG should be 42-53%
+for healthy human fresh sample the Q20 and Q30 should be above 90% and the percentage of CG should be 43-53%
+
+# making shortcuts
+
+open the bashrc
+```
+vi ~/.bashrc
+```
+
+type in the script and add your directory
+```
+alias work='cd /gpfs/ysm/project/fan/nf289'
+
+```
+
 
 going back to the directory
 ```
