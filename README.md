@@ -224,5 +224,11 @@ sh PFA.changid.sh
 ```
 note: the ones that still have IDs are the pixels with no barcodes and the matrix is the number of UMIs ( genes=columns, rows=pixels)
 
+# Image processing Matlab and PS
+
+matlab script is found on https://github.com/edicliuyang/DBiT-seq_FFPE/tree/master/Figure_Processing
+
+upload the images with the correct naming in 03.spatial folder using cyberduck
+
 on R farnam,  run the file in 00.bin, named PFA_run_spatial.rmd.R ehich has been edited on terminal
 
