@@ -232,3 +232,56 @@ upload the images with the correct naming in 03.spatial folder using cyberduck
 
 on R farnam,  run the file in 00.bin, named PFA_run_spatial.rmd.R ehich has been edited on terminal
 
+# making report
+
+```
+cd 00.bin/
+```
+```
+vi Spatial_Report.Rmd
+```
+```
+cd ../
+cd R
+cd x86_64-pc-linux-gnu-library/
+work
+cd 01.FFhLiver/
+cd 00.bin/
+cat PFA_run_spatial.rmd.R 
+ R
+ R CMD BATCH PFA_run_spatial.rmd.R
+ less PFA_run_spatial.rmd.Rout
+ module avail rstudio
+ module load RStudio/1.4.1717
+ cat PFA_run_spatial.rmd.Rout
+ which pandoc
+ which rstuio
+ module load RStudio/1.4.1717
+ module list
+ rm PFA_run_spatial.rmd.Rout
+ Rscript PFA_run_spatial.rmd.R
+ which rstudio
+ which pandoc
+ which rstudio
+ export PATH=/ysm-gpfs/apps/software/RStudio/1.4.1717/bin/pandoc:$PATH
+ which pandoc
+ Rscript PFA_run_spatial.rmd.R
+ ll PFA_Spatial_Report.Rmd
+ vi PFA_run_spatial.rmd.R 
+ Rscript PFA_run_spatial.rmd.R
+ vi PFA_Spatial_Report.Rmd 
+ Rscript PFA_run_spatial.rmd.R
+ srun --pty -p interactive --mem=50g bash
+ exit
+ work
+ cd ../sb2723/
+ cd 01.Spatial_hCortex/
+ cd 03.stpipeline/
+  cd hC2
+  cd ../../
+  cd 00.bin/
+  cat hC2_run_spatial.rmd.R
+  ```
+  
+  
+  
