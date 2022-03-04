@@ -105,6 +105,26 @@ to save and exit
 ```
  :wq!
 ```
+
+to submit pl if it has #
+make a pl
+
+```
+vi barcode-check.pl
+```
+```
+Set paste
+```
+Type i
+
+Command v
+```
+:wq
+```
+next is chmod, change mode
+
+and 
+
 submit a script and job
 ```
 sbatch effective.sh 
