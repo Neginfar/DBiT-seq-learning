@@ -165,7 +165,7 @@ pip install stpipeline
 ```
 wget https://cpan.metacpan.org/authors/id/N/NW/NWCLARK/PerlIO-gzip-0.20.tar.gz
 module avail Perl
-module load Perl/5.28.0-GCCcore-7.3.0
+module load Perl/5.28.0-GCCcore-7.3.0 (***when you need to run PERL script, need load this module first***)
 tar -zxvf PerlIO-gzip-0.20.tar.gz 
 cd PerlIO-gzip-0.20/
 perl Makefile.PL PREFIX=/gpfs/home/nf289/project/01.FFhLiver/00.software
