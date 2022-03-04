@@ -122,8 +122,33 @@ Command v
 :wq
 ```
 next is chmod, change mode
+```
+chmod +x  #barcode-check.pl
+```
 
-and 
+and submit the pl
+```
+perl -c  barcode-check.p
+```
+giving the indirwctory and outdirectory
+```
+nohup perl barcode-check.pl -indir=/gpfs/ysm/project/fan/nf289/01.FFhLiver/01.rawdata -outdir=/gpfs/ysm/project/fan/nf289/01.FFhLiver/01.rawdata/PFA/test -insertsize=PFA & 
+```
+```
+cat nohup.out
+```
+going to someone else directory 
+```
+cd /gpfs/ysm/project/fan/sb2723/00.database/
+```
+```
+nohup perl barcode-check.pl -indir=/gpfs/ysm/project/fan/nf289/01.FFhLiver/01.rawdata -outdir=/gpfs/ysm/project/fan/nf289/01.FFhLiver/01.rawdata/PFA/test -insertsize=PFA  (wd: /gpfs/ysm/project/fan/nf289/01.FFhLiver/01.rawdata/PFA)
+(wd now: /gpfs/ysm/project/fan/nf289/01.FFhLiver/01.rawdata/PFA/test/PFA)
+```
+looking at the running data
+```
+top -u nf289
+```
 
 submit a script and job
 ```
