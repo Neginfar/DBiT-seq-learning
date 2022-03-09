@@ -285,6 +285,15 @@ cd 00.bin/
 ```
 vi Spatial_Report.Rmd
 ```
+
+(**How to install seurat)
+```
+#git clone https://github.com/satijalab/seurat.git
+#7543 line in visualization.R + (shape = 22,)
+#tar -cvf seurat.tar.gz seura
+#install.packages("/gpfs/ysm/project/fan/nf289/01.FFhLiver/00.software/seurat.tar.gz", repos = NULL, type = "source")
+```
+
 ```
 cd ../
 cd R
@@ -327,6 +336,4 @@ cat PFA_run_spatial.rmd.R
   cd 00.bin/
   cat hC2_run_spatial.rmd.R
   ```
-  
-  
   
