@@ -336,4 +336,51 @@ cat PFA_run_spatial.rmd.R
   cd 00.bin/
   cat hC2_run_spatial.rmd.R
   ```
+  # New batch of data
+  running effective.sh
   
+```
+cd 01.FFhLiver/
+cp effective. Sh  effective.new.sh
+cat effective.sh 
+sbatch effective.sh 
+squeue -u nf289
+cd 02.effective
+```
+
+Runing ST_pipeline
+```
+srun --pty -p interactive --meme 20g bash
+
+
+cp FF.stpipeline.sh FFHL2.stpipeline.sh 
+module load miniconda
+conda activate st-pipeline
+sbatch FFHL2.stpipeline.sh 
+cd 03.stpipeline/
+rm *.out
+cd FFHL2
+cd temp
+cp PFA_Spatial_Report-Light.Rmd FFHL2_Spatial_Report-Light.Rmd
+
+```
+Finding Rmd files under 00.bin
+
+Upload all images in the named file under 03.stpipeline
+
+Cat log under 02.effective will give us the reads of barcode A, barcode B and A&B
+
+Under 00.bin 
+```
+perl fq2fa.pl ../02.effective/FFHL2/FFHL2.R2.fq.gz  FFHL2.R2.fa
+```
+Gives the percentage of human reads
+
+```
+Under 00.bin
+```
+Head -200 FFHL2.R2.fa
+```
+Gives the read to copy paste in blast (blast.ncbi.nlm.nih.gove/Blast.cgi
+
+
