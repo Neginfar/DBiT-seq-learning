@@ -383,4 +383,7 @@ Head -200 FFHL2.R2.fa
 ```
 Gives the read to copy paste in blast (blast.ncbi.nlm.nih.gove/Blast.cgi
 
-
+changing y axis of the image and umi heatmap
+```
+perl /gpfs/ysm/project/fan/nf289/01.FFhLiver/00.bin/change-xy.pl FFHL2_stdata.updated.tsv > FFHL2_stdata.updated.changexy.tsv
+```
