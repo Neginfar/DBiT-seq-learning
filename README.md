@@ -342,46 +342,82 @@ cat PFA_run_spatial.rmd.R
 ```
 cd 01.FFhLiver/
 cp effective. Sh  effective.new.sh
-cat effective.sh 
-sbatch effective.sh 
+vi effective.sh 
+sbatch effective.new.sh 
 squeue -u nf289
 cd 02.effective
 ```
+Looking into the ligation of barcode A and B 
 
-Runing ST_pipeline
+,,,
+cd 02.effective
+cd #Samplename
+cat log
+,,,
+<images.githubusercontent.com/51792737/171759300-575fb99c-be66-4981-b1e1-9ad19173f7ac.png">
+
+use excell with QC of data report
+<img width="1227" alt="Screen Shot 2022-06-02 at 7 59 15 PM" src="https://user-images.githubusercontent.com/51792737/171759436-39e7b416-315c-418e-b9ef-fe8971d62d46.png">
+
+
+ Runing ST_pipeline
+ 
 ```
-srun --pty -p interactive --meme 20g bash
-
+srun --pty -p interactive --mem 20g bash
+module load miniconda<img width="923" alt="Screen Shot 2022-06-02 at 7 57 37 PM" src="https://user-
+conda activate st-pipeline
 
 cp FF.stpipeline.sh FFHL2.stpipeline.sh 
-module load miniconda
-conda activate st-pipeline
 sbatch FFHL2.stpipeline.sh 
-cd 03.stpipeline/
-rm *.out
+cd 03.stpipeline
 cd FFHL2
-cd temp
-cp PFA_Spatial_Report-Light.Rmd FFHL2_Spatial_Report-Light.Rmd
+cat SAMPLE_log.txt
+```
+good reads should be like below
+<img width="1311" alt="Screen Shot 2022-06-02 at 8 03 00 PM" src="https://user-images.githubusercontent.com/51792737/171759713-4977d8c5-5e21-44be-a514-619c0ef686c0.png">
+
+Chande ID
+```
+farnam2:nf289 ~$module load miniconda
+farnam2:nf289 ~$conda activate st-pipeline
+Sbatch change.id.sh
+```
+
+looking into the reads with help of  https://blast.ncbi.nlm.nih.gov/Blast.cgi
 
 ```
-Finding Rmd files under 00.bin
+farnam1:nf289 /gpfs/ysm/project/fan/nf289/01.FFhLiver/00.bin$ll
 
-Upload all images in the named file under 03.stpipeline
+farnam1:nf289 /gpfs/ysm/project/fan/nf289/01.FFhLiver/00.bin$module avail perl
 
-Cat log under 02.effective will give us the reads of barcode A, barcode B and A&B
+farnam1:nf289 /gpfs/ysm/project/fan/nf289/01.FFhLiver/00.bin$module load Perl/5.28.0-GCCcore-7.3.0
 
-Under 00.bin 
+farnam1:nf289 /gpfs/ysm/project/fan/nf289/01.FFhLiver/00.bin$perl ../00.bin/fq2fa.pl FFHL5/FFHL5_CKDL220011580-1a_HVV77DSX3_L1_1.fq.gz test.fa
+
+
+#R1= data, R2=barcodes
+
+#Copy reads in NIH blast website
 ```
-perl fq2fa.pl ../02.effective/FFHL2/FFHL2.R2.fq.gz  FFHL2.R2.fa
-```
-Gives the percentage of human reads
 
+
+In cyberduck , upload all images in the sample folder under 03.stpipeline
+
+Find Rmd files under 00.bin
+
+To look into raw data
 ```
+(st-pipeline)farnam2:nf289 /gpfs/ysm/project/fan/nf289/01.FFhLiver/01.rawdata/FFHL5$zcat FFHL5_CKDL220011580-1a_HVV77DSX3_L1_2.fq.gz | grep AACGTGATAACGT
+```
+
+
+
 Under 00.bin
+
 ```
 Head -200 FFHL2.R2.fa
 ```
-Gives the read to copy paste in blast (blast.ncbi.nlm.nih.gove/Blast.cgi
+
 
 changing y axis of the image and umi heatmap
 ```
