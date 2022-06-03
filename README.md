@@ -423,3 +423,28 @@ changing y axis of the image and umi heatmap
 ```
 perl /gpfs/ysm/project/fan/nf289/01.FFhLiver/00.bin/change-xy.pl FFHL2_stdata.updated.tsv > FFHL2_stdata.updated.changexy.tsv
 ```
+ CITE-seq in Ruddle , Yang files
+ #everything for CITE-seq is the same until st-pipeline
+ 
+ ``
+ cd  /gpfs/ycga/project/fan/yl2224/processed_data
+ cd /gpfs/ycga/project/fan/yl2224/processed_data/Hiplex/11122021_GBM/G3/
+ ``
+ 
+ List of 154 human proteins
+ ```
+ /gpfs/ycga/project/fan/yl2224/processed_data/Hiplex/11122021_GBM/G3 or G2
+ ```
+ Under G3
+ ```
+ farnam2:nf289 ~$module load miniconda
+farnam2:nf289 ~$conda activate st-pipeline
+
+pip install biopython
+
+fastq_process.py.( needs to modify )
+&
+CITE-seq-Counts.sh
+
+Sbatch CITE-seq-Counts.sh
+```
