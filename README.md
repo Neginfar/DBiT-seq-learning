@@ -437,10 +437,11 @@ perl /gpfs/ysm/project/fan/nf289/01.FFhLiver/00.bin/change-xy.pl FFHL2_stdata.up
  ```
  Under G3
  ```
- farnam2:nf289 ~$module load miniconda
-farnam2:nf289 ~$conda activate st-pipeline
-
 pip install biopython
+farnam2:nf289 ~$module load miniconda
+farnam2:nf289 ~$conda activate st-pipeline
+pip install CITE-seq-Count --upgrade
+
 
 fastq_process.py.( needs to modify )
 &
