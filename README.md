@@ -449,3 +449,12 @@ CITE-seq-Counts.sh
 
 Sbatch CITE-seq-Counts.sh
 ```
+output:
+
+<img width="954" alt="Screen Shot 2022-06-07 at 10 53 34 AM" src="https://user-images.githubusercontent.com/51792737/172412119-2469c6a6-cfab-4669-9eab-839cb53c1621.png">
+
+
+flow the link below with the output of UMI_count
+
+https://github.com/edicliuyang/Hiplex_proteome/tree/main/Data_visualization/Protein
+
